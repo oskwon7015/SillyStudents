@@ -9,6 +9,7 @@
 
 		$students = array();
 
+		//adding first student
 		$first = new Student();
 		$first->surname = "Doe";
 		$first->first_name = "John";
@@ -19,6 +20,7 @@
 		$first->add_grade(55);
 		$students['j123'] = $first;
 
+		//adding second student
 		$second = new Student();
 		$second->surname = "Einstein";
 		$second->first_name = "Albert";
@@ -30,8 +32,24 @@
 		$second->add_grade(50);
 		$students['a456'] = $second;
 
+		//adding third student
+		$third = new Student();
+		$third->surname = "Kwon";
+		$third->first_name = "Chris";
+		$third->add_email('home','oskwon0504@gmail.com');
+		$third->add_grade(100);
+		$third->add_grade(100);
+		$third->add_grade(100);
+		$students['a000'] = $third;
+
+		//sort function to sort student order
+		ksort($students);
+
+		//print students
 		foreach($students as $student)
    			echo $student->toString();
+
+
 
 		?>
 	</body>
